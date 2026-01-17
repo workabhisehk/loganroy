@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 220 13% 6%;
+    --foreground: 40 25% 92%;
+
+    --card: 220 16% 10%;
+    --card-foreground: 40 25% 92%;
+
+    --popover: 220 16% 10%;
+    --popover-foreground: 40 25% 92%;
+
+    --primary: 38 75% 55%;
+    --primary-foreground: 220 16% 8%;
+
+    --secondary: 222 10% 18%;
+    --secondary-foreground: 40 25% 92%;
+
+    --muted: 222 10% 16%;
+    --muted-foreground: 40 8% 68%;
+
+    --accent: 38 75% 55%;
+    --accent-foreground: 220 16% 8%;
+
+    --destructive: 0 80% 45%;
+    --destructive-foreground: 40 25% 92%;
+
+    --border: 222 10% 22%;
+    --input: 222 10% 22%;
+    --ring: 38 75% 55%;
+
+    --radius: 1.25rem;
+
+    /* Custom tokens */
+    --gradient-hero: linear-gradient(135deg, hsl(220 13% 6%), hsl(222 16% 12%));
+    --gradient-card: linear-gradient(135deg, hsl(220 16% 10%), hsl(222 16% 14%));
+    --gradient-accent: linear-gradient(135deg, hsl(38 75% 55%), hsl(38 75% 65%));
+    --gradient-secondary: linear-gradient(135deg, hsl(222 10% 16%), hsl(222 10% 20%));
+    
+    --shadow-glow: 0 0 40px hsl(38 75% 55% / 0.2);
+    --shadow-glow-secondary: 0 0 40px hsl(38 40% 50% / 0.2);
+    --shadow-card: 0 20px 50px hsl(220 20% 2% / 0.6);
+
+    --transition-smooth: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    letter-spacing: 0.01em;
+  }
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: "Playfair Display", Georgia, serif;
+    letter-spacing: 0.02em;
+  }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap");
